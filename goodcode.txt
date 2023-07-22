@@ -1,0 +1,13 @@
+cd  ~/Desktop
+git clone git@github.com:Leidenschaftliche/my-portfolio.git
+git clone -b umut/creating_initial_react_app --single-branch git@github.com:Leidenschaftliche/create_react_app.git
+
+cd my-portfolio
+git checkout -b codebranch 
+rm -rfv ../create_react_app/.git*
+mv -fv  ../create_react_app/* .
+rm -rfv ../create_react_app/
+
+git add .
+git commit -m "new files are copied from another repo"
+git push --all origin
